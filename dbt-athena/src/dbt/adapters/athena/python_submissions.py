@@ -255,6 +255,7 @@ class AthenaPythonJobHelper(PythonJobHelper):
                 execution_status = execution_response.get("Status", None)
                 execution_result = execution_response.get("Result", None)
                 execution_stderr_s3_path = ""
+                execution_stdout_s3_path = ""
                 if execution_result:
                     execution_stderr_s3_path = execution_result.get("StdErrorS3Uri", None)
                     execution_stdout_s3_path = execution_result.get("StdOutS3Uri", None)
